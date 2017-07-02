@@ -44,12 +44,12 @@ var myNode = new guldencore.Node({
   network: 'regtest'
   services: [
     {
-      name: 'guldend',
+      name: 'GuldenD',
       module: Gulden,
       config: {
         spawn: {
           datadir: '/home/<username>/.gulden',
-          exec: '/home/<username>/guldencore-node/bin/guldend'
+          exec: '/home/<username>/guldencore-node/bin/GuldenD'
         }
       }
     },

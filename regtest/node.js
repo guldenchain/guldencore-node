@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, '../bin/guldend')
+                exec: path.resolve(__dirname, '../bin/GuldenD')
               }
             }
           }
@@ -205,7 +205,7 @@ describe('Node Functionality', function() {
         info.satoshis.should.equal(10 * 1e8);
         info.confirmations.should.equal(3);
         info.tx.blockTimestamp.should.be.a('number');
-        info.tx.feeSatoshis.should.be.within(9500, 40000); // TODO: Not sure how the fee is calculated in guldend, start at rpcwallet.cpp sendtoaddress()
+        info.tx.feeSatoshis.should.be.within(9500, 40000); // TODO: Not sure how the fee is calculated in GuldenD, start at rpcwallet.cpp sendtoaddress()
         done();
       });
     });

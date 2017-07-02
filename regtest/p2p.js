@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/guldend')
+          exec: path.resolve(__dirname, '../bin/GuldenD')
         },
         node: {
           network: bitcore.Networks.testnet

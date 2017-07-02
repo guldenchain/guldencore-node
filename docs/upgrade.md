@@ -28,7 +28,7 @@ To start reindexing add `reindex=1` during the **first startup only**.
   "port": 3001,
   "services": [
     "address",
-    "guldend",
+    "GuldenD",
     "db",
     "web"
   ]
@@ -41,14 +41,14 @@ To start reindexing add `reindex=1` during the **first startup only**.
   "network": "livenet",
   "port": 3001,
   "services": [
-    "guldend",
+    "GuldenD",
     "web"
   ],
   "servicesConfig": {
     "gulden": {
       "spawn": {
         "datadir": "/home/<username>/.gulden",
-        "exec": "/home/<username>/guldencore-node/bin/guldend"
+        "exec": "/home/<username>/guldencore-node/bin/GuldenD"
       }
     }
   }

@@ -19,7 +19,7 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, '../bin/guldend');
+  var execPath = path.resolve(__dirname, '../bin/GuldenD');
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),

@@ -51,7 +51,7 @@ npm install
 cd ../guldencore-node
 npm install
 ```
-**Note**: If you get a message about not being able to download gulden distribution, you'll need to compile guldend from source, and setup your configuration to use that version.
+**Note**: If you get a message about not being able to download gulden distribution, you'll need to compile GuldenD from source, and setup your configuration to use that version.
 
 
 We now will setup symlinks in `guldencore-node` *(repeat this for any other modules you're planning on developing)*:
@@ -66,7 +66,7 @@ ln -s ~/bitcoind-rpc
 And if you're compiling or developing gulden:
 ```bash
 cd ../bin
-ln -sf ~/gulden/src/guldend
+ln -sf ~/gulden/src/GuldenD
 ```
 
 ## Run Tests
@@ -112,17 +112,17 @@ Edit `guldencore-node.json` with something similar to:
   "network": "livenet",
   "port": 3001,
   "services": [
-    "guldend",
+    "GuldenD",
     "web",
     "insight-api",
     "insight-ui",
     "<additional_service>"
   ],
   "servicesConfig": {
-    "guldend": {
+    "GuldenD": {
       "spawn": {
         "datadir": "/home/<youruser>/.gulden",
-        "exec": "/home/<youruser>/gulden/src/guldend"
+        "exec": "/home/<youruser>/gulden/src/GuldenD"
       }
     }
   }
