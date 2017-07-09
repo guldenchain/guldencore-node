@@ -26,7 +26,7 @@ var BitcoinService = proxyquire('../../lib/services/bitcoind', {
 });
 var defaultBitcoinConf = fs.readFileSync(path.resolve(__dirname, '../data/default.Gulden.conf'), 'utf8');
 
-describe('Bitcoin Service', function() {
+describe('Gulden Service', function() {
   var txhex = '01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000';
 
   var baseConfig = {
@@ -381,7 +381,7 @@ describe('Bitcoin Service', function() {
         port: 20000,
         rpcport: 50001,
         rpcallowip: '127.0.0.1',
-        rpcuser: 'bitcoin',
+        rpcuser: 'Gulden',
         rpcpassword: 'local321',
         server: 1,
         spentindex: 1,
@@ -389,8 +389,8 @@ describe('Bitcoin Service', function() {
         txindex: 1,
         upnp: 0,
         whitelist: '127.0.0.1',
-        zmqpubhashblock: 'tcp://127.0.0.1:29332',
-        zmqpubrawtx: 'tcp://127.0.0.1:29332'
+        zmqpubhashblock: 'tcp://127.0.0.1:29232',
+        zmqpubrawtx: 'tcp://127.0.0.1:29232'
       });
     });
     it('will expand relative datadir to absolute path', function() {
@@ -503,8 +503,8 @@ describe('Bitcoin Service', function() {
         addressindex: 1,
         spentindex: 1,
         server: 1,
-        zmqpubrawtx: 'tcp://127.0.0.1:29332',
-        zmqpubhashblock: 'tcp://127.0.0.1:29331',
+        zmqpubrawtx: 'tcp://127.0.0.1:29232',
+        zmqpubhashblock: 'tcp://127.0.0.1:29231',
         reindex: 1
       };
       var node = {};
@@ -2038,7 +2038,7 @@ describe('Bitcoin Service', function() {
       bitcoind.options = {};
       bitcoind.start(function(err) {
         err.should.be.instanceof(Error);
-        err.message.should.match(/Bitcoin configuration options/);
+        err.message.should.match(/Gulden configuration options/);
       });
       done();
     });

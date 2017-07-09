@@ -26,21 +26,21 @@ It's also possible to connect to separately managed `bitcoind` processes with ro
         {
           "rpchost": "127.0.0.1",
           "rpcport": 30521,
-          "rpcuser": "bitcoin",
+          "rpcuser": "Gulden",
           "rpcpassword": "local321",
           "zmqpubrawtx": "tcp://127.0.0.1:30611"
         },
         {
           "rpchost": "127.0.0.1",
           "rpcport": 30522,
-          "rpcuser": "bitcoin",
+          "rpcuser": "Gulden",
           "rpcpassword": "local321",
           "zmqpubrawtx": "tcp://127.0.0.1:30622"
         },
         {
           "rpchost": "127.0.0.1",
           "rpcport": 30523,
-          "rpcuser": "bitcoin",
+          "rpcuser": "Gulden",
           "rpcpassword": "local321",
           "zmqpubrawtx": "tcp://127.0.0.1:30633"
         }

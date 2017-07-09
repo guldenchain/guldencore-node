@@ -16,7 +16,7 @@ log.debug = function() {};
 var BitcoreNode = index.Node;
 var BitcoinService = index.services.Bitcoin;
 
-describe('Bitcoin Cluster', function() {
+describe('Gulden Cluster', function() {
   var node;
   var daemons = [];
   var execPath = path.resolve(__dirname, '../bin/GuldenD');
@@ -24,7 +24,7 @@ describe('Bitcoin Cluster', function() {
     {
       datadir: path.resolve(__dirname, './data/node1'),
       conf: path.resolve(__dirname, './data/node1/Gulden.conf'),
-      rpcuser: 'bitcoin',
+      rpcuser: 'Gulden',
       rpcpassword: 'local321',
       rpcport: 30521,
       zmqpubrawtx: 'tcp://127.0.0.1:30611',
@@ -33,7 +33,7 @@ describe('Bitcoin Cluster', function() {
     {
       datadir: path.resolve(__dirname, './data/node2'),
       conf: path.resolve(__dirname, './data/node2/Gulden.conf'),
-      rpcuser: 'bitcoin',
+      rpcuser: 'Gulden',
       rpcpassword: 'local321',
       rpcport: 30522,
       zmqpubrawtx: 'tcp://127.0.0.1:30622',
@@ -42,7 +42,7 @@ describe('Bitcoin Cluster', function() {
     {
       datadir: path.resolve(__dirname, './data/node3'),
       conf: path.resolve(__dirname, './data/node3/Gulden.conf'),
-      rpcuser: 'bitcoin',
+      rpcuser: 'Gulden',
       rpcpassword: 'local321',
       rpcport: 30523,
       zmqpubrawtx: 'tcp://127.0.0.1:30633',
@@ -51,7 +51,7 @@ describe('Bitcoin Cluster', function() {
   ];
 
   before(function(done) {
-    log.info('Starting 3 bitcoind daemons');
+    log.info('Starting 3 GuldenD daemons');
     this.timeout(60000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [
@@ -109,21 +109,21 @@ describe('Bitcoin Cluster', function() {
               {
                 rpchost: '127.0.0.1',
                 rpcport: 30521,
-                rpcuser: 'bitcoin',
+                rpcuser: 'Gulden',
                 rpcpassword: 'local321',
                 zmqpubrawtx: 'tcp://127.0.0.1:30611'
               },
               {
                 rpchost: '127.0.0.1',
                 rpcport: 30522,
-                rpcuser: 'bitcoin',
+                rpcuser: 'Gulden',
                 rpcpassword: 'local321',
                 zmqpubrawtx: 'tcp://127.0.0.1:30622'
               },
               {
                 rpchost: '127.0.0.1',
                 rpcport: 30523,
-                rpcuser: 'bitcoin',
+                rpcuser: 'Gulden',
                 rpcpassword: 'local321',
                 zmqpubrawtx: 'tcp://127.0.0.1:30633'
               }

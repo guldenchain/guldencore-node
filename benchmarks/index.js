@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('Bitcoin Service native interface vs. Bitcoin JSON RPC interface');
+console.log('Gulden Service native interface vs. Gulden JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -43,17 +43,17 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('Bitcoin Core started');
+  console.log('Gulden Core started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('Bitcoin Core ready');
+  console.log('Gulden Core ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',
-    port: 19332,
-    user: 'bitcoin',
+    port: 19232,
+    user: 'Gulden',
     pass: 'local321'
   });
 

@@ -60,16 +60,16 @@ describe('Bitcoind Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Bitcoin Core to initialize...');
+      log.info('Waiting for Gulden Core to initialize...');
 
       bitcoind.start(function() {
-        log.info('Bitcoind started');
+        log.info('GuldenD started');
 
         client = new BitcoinRPC({
           protocol: 'http',
           host: '127.0.0.1',
           port: 30331,
-          user: 'bitcoin',
+          user: 'Gulden',
           pass: 'local321',
           rejectUnauthorized: false
         });
